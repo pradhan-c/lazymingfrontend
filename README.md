@@ -1,3 +1,4 @@
+contract address = "0x250Fe19d7981762BeC25E0C7490bF6bb193fcee8";
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
