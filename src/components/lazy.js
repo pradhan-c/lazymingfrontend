@@ -4,7 +4,7 @@ import { Navigate  } from "react-router-dom";
 import { Row, Form, Button ,Spinner} from 'react-bootstrap';
 import { create as ipfsHttpClient } from 'ipfs-http-client';
 import  Axios  from "axios";
-import { LazyMinter } from "../Lazymint/Createvoucher";
+import { LazyMinter }  from "../Lazymint/Createvoucher";
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
 const BigNumber = require('bignumber.js');
 const convert = require('ethereum-unit-converter')
