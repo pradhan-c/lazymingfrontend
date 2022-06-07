@@ -9,7 +9,7 @@ const Home = ({ contract, account }) => {
 
   const loadMarketplaceItems = async () => {
     setLoading(true);
-    Axios.get("http://localhost:3001/read").then((response) => {
+    Axios.get("https://lazy-minting.herokuapp.com/read").then((response) => {
       setItems(response.data);
       
     });
@@ -28,7 +28,7 @@ const Home = ({ contract, account }) => {
          alert("You cant buy your own nft");
     }else{
       await (await contract.redeem(account , item.tokenId, item.minPrice.toString(),item.uri,item.name,item.description,item.signature, { value: item.minPrice.toString()})).wait();
-      Axios.put("http://localhost:3001/update",{
+      Axios.put("https://lazy-minting.herokuapp.com/update",{
         id  : item._id ,
         listed : false ,
         account : account,

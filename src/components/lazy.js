@@ -38,7 +38,7 @@ const  Lazy = ({contract, signer,account}) =>  {
             console.log("ipfs image upload error: ", error);
           }
         }
-        Axios.get("http://localhost:3001/data").then((response) => {
+        Axios.get("https://lazy-minting.herokuapp.com/data").then((response) => {
         
             setid(response.data.tokenId + 1);
           
@@ -78,7 +78,7 @@ const  Lazy = ({contract, signer,account}) =>  {
 		      console.log(voucher);
           setVoucher(voucher)
           
-          Axios.post("http://localhost:3001/insert",{
+          Axios.post("https://lazy-minting.herokuapp.com/insert",{
             voucher:voucher,
             image : image,
             price : price,
