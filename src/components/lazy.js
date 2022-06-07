@@ -88,7 +88,9 @@ const  Lazy = ({contract, signer,account}) =>  {
 
           });
           setLoading(false);
-          setredirect(true);
+          let timer1 = setTimeout(() =>setredirect(true), 4000);
+
+         
           
           
         

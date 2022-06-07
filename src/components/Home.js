@@ -8,7 +8,7 @@ const Home = ({ contract, account }) => {
   const [items, setItems] = useState([]);
 
   const loadMarketplaceItems = async () => {
-    setLoading(true);
+    
     Axios.get("https://lazy-minting.herokuapp.com/read").then((response) => {
       setItems(response.data);
       
