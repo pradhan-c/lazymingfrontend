@@ -9,7 +9,7 @@ const Home = ({ contract, account }) => {
 
   const loadMarketplaceItems = async () => {
     
-    Axios.get("https://lazy-minting.herokuapp.com/read").then((response) => {
+     Axios.get("https://lazy-minting.herokuapp.com/read").then((response) => {
       setItems(response.data);
       
     });
@@ -33,7 +33,8 @@ const Home = ({ contract, account }) => {
         listed : false ,
         account : account,
         });
-      loadMarketplaceItems();
+        let timer1 = setTimeout(() =>loadMarketplaceItems(), 2000);
+     
       
       
     }
